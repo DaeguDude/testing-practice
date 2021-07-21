@@ -12,12 +12,18 @@ function caesar(str, numShift) {
       if (isLowerCase(str[i])) {
         const zeroBasedLetter = letterAsNumber - 97;
 
-        const result = ((zeroBasedLetter + numShift) % 26) + 97;
+        const result =
+          numShift >= 0
+            ? ((zeroBasedLetter + numShift) % 26) + 97
+            : ((zeroBasedLetter + numShift) % 26) + 97 + 26;
         shiftedChar = String.fromCharCode(result);
       } else {
         const zeroBasedLetter = letterAsNumber - 65;
 
-        const result = ((zeroBasedLetter + numShift) % 26) + 65;
+        const result =
+          numShift >= 0
+            ? ((zeroBasedLetter + numShift) % 26) + 65
+            : ((zeroBasedLetter + numShift) % 26) + 65 + 26;
         shiftedChar = String.fromCharCode(result);
       }
 

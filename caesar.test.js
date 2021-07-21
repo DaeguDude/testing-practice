@@ -9,7 +9,7 @@ test("caesar cipher", () => {
     "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"
   );
   expect(caesar("z", 1)).toBe("a");
-  expect(caesar("aBc", 1)).toBe("bCd");
+  expect(caesar("aBc", 27)).toBe("bCd");
   expect(caesar("abc!", 1)).toBe("bcd!");
 
   // I need to pass this test case
